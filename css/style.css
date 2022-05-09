@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lexend+Deca:wght@300;400;500;600&family=Open+Sans:wght@400;700&family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,800&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+html {
+  text-transform: capitalize;
+}
+body{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: "outlit", sans-serif;
+    background-color:hsl(217, 54%, 11%);
+}
+
+.wrapper  {
+    width: fit-content;
+    background-color:hsl(216, 50%, 16%) ;
+    border-radius:15px;
+    box-shadow: 0 0 20px hsl(216, 50%, 11%),
+     0 0 17px hsl(216, 50%, 11%),
+     0 0 10px hsl(216, 50%, 11%);
+    display: flex;
+    justify-content: center;
+}
+
+.box   {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.box .image{
+    position: relative;
+    background-image: url(../images/image-equilibrium.jpg);
+    background-size:cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 350px;
+    border-radius: 15px;
+}
+
+.box .image::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(178, 100%, 50%);
+    border-radius: 16px;
+    opacity: 40%;
+    display: none; 
+}
+.box .image::after{
+    content: '';
+    position: absolute;
+    background-image: url(../images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+ 
+.box .image:hover::before,
+.box .image:hover::after{
+    cursor: pointer;
+    display: block;
+}
+
+
+.wrapper .content h2 {
+    color: #fff;
+    margin: 15px 0;
+    transition: all .3s linear;
+}
+.wrapper .content h2:hover {
+    cursor: pointer;
+    color:hsl(178, 100%, 50%);
+}
+.wrapper .content p{
+    color:hsl(215, 51%, 70%) ;
+    font-size: 18px;
+}
+.wrapper .content ul{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    margin-top: 20px;
+}
+.wrapper .content ul li img {
+   transform: translateY(2px);
+   margin-right: 5px;
+   height: 15px;
+}
+.wrapper .content ul li:nth-child(1) {
+    color: hsl(178, 100%, 50%);
+    font-weight:600 ;
+}
+
+.wrapper .content ul li:nth-child(2){
+    color: hsl(215, 51%, 70%);
+}
+.wrapper .content ul::after
+{
+    content: '';
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    background-color: hsl(215, 32%, 27%);
+    border-radius :15px; ;
+    margin-top: 20px;
+    top: 100%;
+}
+.wrapper .content .info{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    
+}
+.wrapper .content .info img{
+    margin-right: 15px;
+    width: 25px;
+    border-radius: 50%;
+    border: 1.5px solid #fff;
+}
+.wrapper .content .info p{
+    font-size: 1em;
+    color: hsl(215, 51%, 70%);
+}
+.wrapper .content .info p span{
+    color:#fff;
+    transition: all 0.3s ease;
+}
+
+.wrapper .content .info p span:hover{
+    cursor: pointer;
+    color:hsl(178, 100%, 50%);
+}
+
+
+@media (max-width:375px){
+    .wrapper  {
+        width: 250px;
+    }
+    .wrapper .content .info p{
+        font-size:12px ;
+    }
+}
